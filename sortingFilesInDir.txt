@@ -3,10 +3,9 @@
 # with current date and time.
 
 # Read directory
+directory=$1
 directory_name="current"
 
-echo -e "Please enter a full pass to a directory for sorting otherwise current directory will be used: "
-read directory
 if [ -d $directory ] && [ ! -z $directory ]
 then
   cd $directory
@@ -16,7 +15,8 @@ fi
 # Sort files
 # and print files from the directory
 echo "The following files are stored in the "$directory_name" directory :"
-find $directory -type f |sort -n
+ls -l | sort -n
+#find $directory -type f |sort -n
 
 # Print current date and time
 echo "Current Date and Time is : "
