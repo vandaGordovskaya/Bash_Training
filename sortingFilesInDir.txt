@@ -16,7 +16,6 @@ fi
 # and print files from the directory
 echo "The following files are stored in the "$directory_name" directory :"
 ls -l | sort -n
-#find $directory -type f |sort -n
 
 # Print current date and time
 echo "Current Date and Time is : "
